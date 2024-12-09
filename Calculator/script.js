@@ -2,7 +2,7 @@ const display = document.getElementById("display");
 
 function addToDisplay(input) {
     display.value += input;
-    console.log(display.value);
+    // console.log(display.value);
 }
 
 function clearDisplay() {
