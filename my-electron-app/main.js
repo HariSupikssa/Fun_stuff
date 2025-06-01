@@ -1,23 +1,23 @@
-// const { app, BrowserWindow} = require('electron')
-import { app, BrowserWindow } from "electron"
+const { app, BrowserWindow } = require('electron')
 
-const createWindow = ()=>{
+const path = require('path')
+const createWindow = () => {
     const win = new BrowserWindow({
-        width : 800,
+        width: 800,
         height: 600,
-        webPreferences:{
-            preload: Path2D.join(__dirname, 'preload.js')
+        webPreferences: {
+            preload: path.join(__dirname, 'preload.js')
         }
     })
 
     win.loadFile('index.html')
 }
 
-app.whenReady().then(()=>{
+app.whenReady().then(() => {
     createWindow()
 })
 
-app.on('window-all-closed',()=>{
-    if(process.platform != 'darwin')
+app.on('window-all-closed', () => {
+    if (process.platform != 'darwin')
         app.quit();
 })
