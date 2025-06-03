@@ -35,3 +35,13 @@ app.on('window-all-closed', () => {
     if (process.platform != 'darwin')
         app.quit();
 })
+
+// On macOS, apps remain alive/active in the Dock(like TaskBar in Windows) even after all windows are closed.
+// This handler listens for the app being reactivated.
+// When the app icon in the Dock is clicked, Electron creates a new window if none are open.
+
+app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+        createWindow();
+    }
+})
