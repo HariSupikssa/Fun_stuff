@@ -11,20 +11,20 @@ const createWindow = () => {
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
         }
-       
+
     })
     win.loadFile('index.html')
-//     setTimeout(() => {
-//     win.loadFile('index.html');
-//   }, 5000);
-     
+    //     setTimeout(() => {
+    //     win.loadFile('index.html');
+    //   }, 5000);
+
     // // Showing the window gracefully
     // win.loadFile('index.html')
     // win.once('ready-to-show',()=>{
     //         win.show();
     //     })
     // win.loadURL('https://soundcloud.com/adelynnxx/ounder-the-influence-x-i-was-6');
-    
+
 }
 
 app.whenReady().then(() => {
