@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 
+
 const path = require('path')
 const createWindow = () => {
     const win = new BrowserWindow({
@@ -12,6 +13,10 @@ const createWindow = () => {
         }
        
     })
+    win.loadFile('index.html')
+//     setTimeout(() => {
+//     win.loadFile('index.html');
+//   }, 5000);
      
     // // Showing the window gracefully
     // win.loadFile('index.html')
