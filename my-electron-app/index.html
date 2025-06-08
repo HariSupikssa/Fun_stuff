@@ -11,19 +11,38 @@
 </head>
 
 <body>
-    <div class="titlebar"> Title bar
+    <div class="mainApp">
+        <div class="topbar">
+            <div class="child titlebar">
+                <h5>Titlebar</h5>
+            </div>
+            <div class="child titlebarbtn">
+                <!-- <button class="topbtn minimizeBtn" id="minimizeBtn"></button>
+                <button class="topbtn maximizeBtn" id="maximizeBtn"></button> -->
+                <button class="topbtn closeBtn" id="closeBtn"> </button>
+            </div>
+        </div>
 
-        <div class="titlebarbtn">
-            <!-- <div class="topbtn minimizeBtn" id="minimizeBtn"></div>
-            <div class="topbtn maximizeBtn" id="maximizeBtn"></div> -->
-            <button class="topbtn closeBtn" id="closeBtn"> </button>
+        <div class="contentArea">
+            <div class="body-con">
+                <div class="strawberry-con"><img src="assets/strawberry.gif" id="strawberry" alt="strawberry"></div>
+                <div class="timer-con">
+                    <p id="timerVar">50:00</p>
+                </div>
+                <div class="settings-con">
+                    <img src="assets/refresh.png" id="refresh" class="icon" alt="refresh">
+                    <img src="assets/resume.png" id="dual-btn" class="icon" alt="pause/play">
+                </div>
+
+            </div>
 
         </div>
     </div>
-    <h1>Hello from Electron renderer!</h1>
+    <!-- <h1>Hello from Electron renderer!</h1>
     <p>👋</p>
-    <p id="info"></p>
+    <p id="info"></p> -->
 </body>
 <script src="./renderer.js"></script>
+<script src="script.js"></script>
 
 </html>

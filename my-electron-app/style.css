@@ -1,21 +1,60 @@
+@font-face {
+    font-family: "Medodica";
+    src: url(font/MedodicaRegular.otf);
+}
+
 body,
 html {
     margin: 0;
     height: 100%;
     width: 100%;
 }
+.mainApp
+{
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.topbar
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    background: rgb(253, 203, 238);
+}
+.child
+{
+    width: 50%;
+}
+.titlebarbtn
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.topbar> .titlebar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
 
 .titlebarBtn {
     display: flex;
 }
-
-.titlebar {
-    height: 30px;
-    background: rgb(253, 203, 238);
-    /* color: white; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* .child
+{
+    width: 50%;
+} */
+.topbtn:hover
+{
+    background-color: rgb(243, 158, 218);
 }
 
 .closeBtn {
@@ -34,4 +73,55 @@ html {
 {
     display: flex;
     flex-direction: row;
+}
+
+.contentArea {
+    background-image: url("assets/bg7.jpg");
+    background-size: cover;
+    font-family: Medodica;
+    font-weight: bold;
+    color: brown;
+    font-size: clamp(45px, 3vmin, 24px);
+    margin: 0 auto;
+    padding: 0;
+}
+
+#strawberry {
+    width: 70%;
+    /* padding: 0; */
+
+}
+
+.icon {
+    width: 30%;
+
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.settings-con {
+
+    display: flex;
+    justify-content: center;
+    gap: 60%;
+
+}
+
+#timerVar {
+    margin: 10% auto;
+}
+
+.timer-con {
+    justify-content: center;
+    padding: 0%;
+    margin: 0;
+}
+
+#strawberry {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

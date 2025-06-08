@@ -3,33 +3,37 @@ const { app, BrowserWindow } = require('electron')
 
 const path = require('path')
 const createWindow = () => {
-    // const win = new BrowserWindow({
-    //     // // Showing the window gracefully
-    //     // show: false,
-
-    //     // titleBarStyle: 'hidden',
-    //     // resizable: false,
-    //     // alwaysOnTop: true,
-    //     // frame: false,
-
-    //     // titleBarStyle: 'hidden',
-    //     // titleBarOverlay: {color: '#fbadd1', symbolColor: '#faffad'},
-
-    //     // icon: 'assets/exit.png', 
-    //     // opacity: 0.7, 1=? fully opaque
-    //     // visualEffectState: 'inactive', What is this for?
-    //     width: 800,
-    //     height: 600,
-    //     webPreferences: {
-    //         preload: path.join(__dirname, 'preload.js')
-    //     }
-
-    // })
-
     const win = new BrowserWindow({
-        titleBarStyle : 'hidden',
-        titleBarOverlay : true,
+        // // Showing the window gracefully
+        // show: false,
+
+        // titleBarStyle: 'hidden',
+        // resizable: false,
+        // alwaysOnTop: true,
+        // frame: false,
+
+        // titleBarStyle: 'hidden',
+        // titleBarOverlay: {color: '#fbadd1', symbolColor: '#faffad'},
+
+        // icon: 'assets/exit.png', 
+        // opacity: 0.7, 1=? fully opaque
+        // visualEffectState: 'inactive', What is this for?
+        width: 500,
+        height: 600,
+        frame: false,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: true,
+            devTools: true,
+            preload: path.join(__dirname, 'preload.js')
+        }
+
     })
+
+    // const win = new BrowserWindow({
+    //     titleBarStyle : 'hidden',
+    //     titleBarOverlay : true,
+    // })
     // win.setWindowButtonVisibility(true); 
     win.loadFile('index.html')
     //     setTimeout(() => {
