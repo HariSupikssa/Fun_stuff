@@ -22,6 +22,7 @@ const createWindow = () => {
         height: 475,
         resizable: false,
         frame: false,
+        icon: path.join(__dirname, 'assets/strawberry.ico'),
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
@@ -38,7 +39,7 @@ const createWindow = () => {
     // win.setWindowButtonVisibility(true); 
     win.loadFile('index.html')
 
-  
+
     //     setTimeout(() => {
     //     win.loadFile('index.html');
     //   }, 5000);
@@ -52,11 +53,11 @@ const createWindow = () => {
 
 }
 
-  ipcMain.on('closeApp', () => {
-        console.log("Close app received");
-        app.quit();
-    });
- 
+ipcMain.on('closeApp', () => {
+    console.log("Close app received");
+    app.quit();
+});
+
 app.whenReady().then(() => {
     createWindow()
 })

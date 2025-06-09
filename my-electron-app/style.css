@@ -1,100 +1,3 @@
-/* @font-face {
-    font-family: "Medodica";
-    src: url(font/MedodicaRegular.otf);
-}
-
-body,
-html {
-    font-family: Medodica;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
-body
-{
-    background-image: url("assets/bg7.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.mainApp
-{
-    display: flex;
-    flex: 1 1;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    overflow: hidden;
-}
-
-
-.child
-{
-    width: 50%;
-}
-.titlebarbtn
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 2%;    
-    justify-content: flex-end;
-}
-.topbar> .titlebar
-{
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.titlebarBtn {
-    display: flex;
-}
-
-
-.closeBtn {
-    background-image: url('./assets/exit.png');
-    background-size: cover;
-
-    height: 20px;
-    width: 20px;
-    background-color: transparent;
-    color: transparent;
-    border: none;
-}
-
-.titlebarbtn
-{
-    display: flex;
-    flex-direction: row;
-}
-
-.contentArea {
-
-    background-size: cover;
-    font-weight: bold;
-    color: brown;
-    font-size: clamp(45px, 3vmin, 24px);
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#strawberry {
-
-
-.icon {
-    width: 50%;
-
-}
- */
-
 @font-face {
     font-family: "Medodica";
     src: url(font/MedodicaRegular.otf);
@@ -109,8 +12,7 @@ html {
     width: 100%;
 }
 
-body
-{
+body {
     background-image: url("assets/bg7.jpg");
     /* background-image: url("assets/pattern.jpg"); */
     background-repeat: no-repeat;
@@ -118,23 +20,22 @@ body
     overflow-y: hidden;
     overflow-x: hidden;
 }
-h3
-{
+
+h3 {
     color: aliceblue;
     font-weight: 100;
     font-size: xx-large;
 }
-.mainApp
-{
+
+.mainApp {
     display: flex;
     flex-direction: column;
     height: 100vh;
     user-select: none;
-    
+
 }
 
-.contentArea
-{
+.contentArea {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,8 +47,7 @@ h3
     flex: 1;
 }
 
-.topbar
-{
+.topbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -159,20 +59,19 @@ h3
     user-select: none;
     -webkit-user-select: none;
 }
-.contentArea *
-{
+
+.contentArea * {
     -webkit-user-drag: none;
 }
-.titlebar
-{
+
+.titlebar {
     flex: 5;
     align-items: center;
     justify-content: flex-start;
     -webkit-app-region: drag;
 }
 
-.titlebarbtn
-{
+.titlebarbtn {
     flex: 1;
     justify-content: flex-end;
     /* padding-right: 10px; */
@@ -195,22 +94,21 @@ h3
     /* padding-right: 0.2rem; */
     margin-right: 0;
     cursor: pointer;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
-.topbtn:hover
-{
- 
+.topbtn:hover {
+
     box-shadow: 0 0 5px 0.3px rgba(249, 249, 249, 0.8);
 }
+
 .icon:hover {
     transform: scale(1.2);
     transition: transform 0.2s ease-in-out;
-    
+
 }
 
-.icon
-{
+.icon {
     height: 90%;
 }
