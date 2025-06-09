@@ -1,14 +1,19 @@
-@font-face {
+/* @font-face {
     font-family: "Medodica";
     src: url(font/MedodicaRegular.otf);
 }
 
 body,
 html {
+    font-family: Medodica;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+}
+
+body
+{
     background-image: url("assets/bg7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,14 +27,7 @@ html {
     overflow: hidden;
 }
 
-.topbar
-{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 40px;
-    background: rgba(251, 169, 200, 0.5);
-}
+
 .child
 {
     width: 50%;
@@ -39,6 +37,7 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 2%;    
     justify-content: flex-end;
 }
 .topbar> .titlebar
@@ -53,25 +52,16 @@ html {
 .titlebarBtn {
     display: flex;
 }
-/* .child
-{
-    width: 50%;
-} */
-.topbtn:hover
-{
-    background-color: rgb(243, 158, 218);
-}
+
 
 .closeBtn {
     background-image: url('./assets/exit.png');
     background-size: cover;
-    float: right;
+
     height: 20px;
     width: 20px;
     background-color: transparent;
     color: transparent;
-    /* border-radius: 50%; */
-    /* background-size: 100%; */
     border: none;
 }
 
@@ -82,9 +72,8 @@ html {
 }
 
 .contentArea {
-    /* background-image: url("assets/bg7.jpg"); */
+
     background-size: cover;
-    font-family: Medodica;
     font-weight: bold;
     color: brown;
     font-size: clamp(45px, 3vmin, 24px);
@@ -92,44 +81,122 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #strawberry {
-    width: 70%;
-    /* padding: 0; */
 
-}
 
 .icon {
-    width: 30%;
+    width: 50%;
 
 }
+ */
 
+@font-face {
+    font-family: "Medodica";
+    src: url(font/MedodicaRegular.otf);
+}
+
+body,
+html {
+    font-family: Medodica;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body
+{
+    background-image: url("assets/bg7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+h3
+{
+    color: aliceblue;
+    font-weight: 100;
+    font-size: xx-large;
+}
+.mainApp
+{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+.contentArea
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: bold;
+    color: rgb(131, 34, 34);
+    font-size: clamp(45px, 3vmin, 24px);
+    flex: 1;
+}
+
+.topbar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    width: 100%;
+    height: 40px;
+    background: rgba(240, 134, 174, 0.3);
+   
+}
+.titlebar
+{
+    flex: 2;
+    justify-content: flex-start;
+}
+
+.titlebarBtn
+{
+    flex: 1;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+#strawberry {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+
+.closeBtn {
+    background-image: url('./assets/exit.png');
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    padding-right: 1rem;
+}
+
+.topbtn:hover
+{
+ 
+    box-shadow: 0 0 5px 0.3px rgba(249, 249, 249, 0.8);
+}
 .icon:hover {
     transform: scale(1.2);
     transition: transform 0.2s ease-in-out;
 }
-/*
-.settings-con {
 
-    display: flex;
-     justify-content: center;
-    gap: 60%;
-
+.icon
+{
+    height: 90%;
 }
-
-#timerVar {
-    margin: 10% auto;
-}
-
-.timer-con {
-    justify-content: center;
-    padding: 0%;
-    margin: 0;
-}
-
-#strawberry {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
