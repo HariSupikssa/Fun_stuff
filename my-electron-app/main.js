@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 
 
 const path = require('path')
@@ -23,7 +23,7 @@ const createWindow = () => {
         frame: false,
         webPreferences: {
             nodeIntegration: true,
-            contextIsolation: true,
+            contextIsolation: false,
             devTools: true,
             preload: path.join(__dirname, 'preload.js')
         }
@@ -36,6 +36,8 @@ const createWindow = () => {
     // })
     // win.setWindowButtonVisibility(true); 
     win.loadFile('index.html')
+
+  
     //     setTimeout(() => {
     //     win.loadFile('index.html');
     //   }, 5000);
@@ -49,6 +51,11 @@ const createWindow = () => {
 
 }
 
+  ipcMain.on('closeApp', () => {
+        console.log("Close app received");
+        app.quit();
+    });
+ 
 app.whenReady().then(() => {
     createWindow()
 })
@@ -58,7 +65,7 @@ app.on('window-all-closed', () => {
         app.quit();
 })
 
-// On macOS, apps remain alive/active in the Dock(like TaskBar in Windows) even after all windows are closed.
+// On macOS, apps remain alive/active i n the Dock(like TaskBar in Windows) even after all windows are closed.
 // This handler listens for the app being reactivated.
 // When the app icon in the Dock is clicked, Electron creates a new window if none are open.
 
@@ -67,3 +74,4 @@ app.on('activate', () => {
         createWindow();
     }
 })
+
