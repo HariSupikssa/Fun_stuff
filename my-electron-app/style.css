@@ -112,6 +112,7 @@ html {
 body
 {
     background-image: url("assets/bg7.jpg");
+    /* background-image: url("assets/pattern.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: hidden;

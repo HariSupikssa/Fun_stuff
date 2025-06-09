@@ -18,8 +18,9 @@ const createWindow = () => {
         // icon: 'assets/exit.png', 
         // opacity: 0.7, 1=? fully opaque
         // visualEffectState: 'inactive', What is this for?
-        width: 500,
-        height: 600,
+        width: 370,
+        height: 475,
+        resizable: false,
         frame: false,
         webPreferences: {
             nodeIntegration: true,
