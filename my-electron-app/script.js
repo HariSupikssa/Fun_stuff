@@ -51,11 +51,11 @@ function checkState() {
 }
 function reset() {
 
-        clearInterval(intervalId);
-        minutes = 50; seconds = 0;
-        paddedSeconds = String(seconds).padStart(2, '0');
-        paddedMinutes = String(minutes).padStart(2, '0');
-        displayText.innerHTML = `${paddedMinutes}:${paddedSeconds}`;
-        dualBtn.src = resumeSrc;
-        isTimerOn = false;
+    clearInterval(intervalId);
+    minutes = 50; seconds = 0;
+    paddedSeconds = String(seconds).padStart(2, '0');
+    paddedMinutes = String(minutes).padStart(2, '0');
+    displayText.innerHTML = `${paddedMinutes}:${paddedSeconds}`;
+    dualBtn.src = resumeSrc;
+    isTimerOn = false;
 }
