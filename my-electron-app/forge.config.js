@@ -10,7 +10,7 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: { setupIcon: 'assets/strawberry-icon', },
+      config: { setupIcon: 'assets/strawberry-icon.ico', },
     },
     {
       name: '@electron-forge/maker-zip',
@@ -18,11 +18,11 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-deb',
-      config: { icon: 'assets/strawberry-icon', },
+      config: { icon: 'assets/strawberry-png.png', },
     },
     {
       name: '@electron-forge/maker-rpm',
-      config: { icon: 'assets/strawberry-icon', },
+      config: { icon: 'assets/strawberry-png.png', },
     },
   ],
   plugins: [
