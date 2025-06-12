@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Medodica";
+    src: url(MedodicaRegular.otf);
+}
+
+body {
+    background-image: url("assets/bg7.jpg");
+    background-size: cover;
+    font-family: Medodica;
+    font-weight: bold;
+    color: brown;
+    font-size: clamp(45px, 3vmin, 24px);
+    margin: 0 auto;
+    /* padding: 0; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* background-color: aqua; */
+}
+
+.body-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* justify-self: center; */
+    background-image: url("./assets//pattern.jpg");
+    margin: 20vh auto;
+    height: 60vh;
+    width: 50vh;
+}
+
+#strawberry {
+    width: 90%;
+    /* padding: 0; */
+
+}
+
+.icon {
+    width: 60%;
+
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.settings-con {
+
+    display: flex;
+    justify-content: center;
+    gap: 60%;
+
+}
+
+#timerVar {
+    margin: 10% auto;
+}
+
+.timer-con {
+    justify-content: center;
+    padding: 0%;
+    margin: 0;
+}
+
+#strawberry {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
