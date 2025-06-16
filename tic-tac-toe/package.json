@@ -2,7 +2,7 @@
   "name": "tic-tac-toe",
   "version": "1.0.0",
   "description": "Tic-Tac-Toe",
-  "main": "main.js",
+  "main": "src/main/main.js",
   "scripts": {
     "start": "electron ./src/main/main.js",
     "test": "echo \\\"Error: no test specified\\\" && exit 1"
