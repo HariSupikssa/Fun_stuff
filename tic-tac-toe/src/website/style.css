@@ -18,7 +18,7 @@ html {
 .topbar {
     background-color: darkgray;
     padding: 0 0.8%;
-    height: 50px;
+    height: 35px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -26,7 +26,8 @@ html {
     justify-content: space-between;
     user-select: none;
     -webkit-user-select: none;
-
+    line-height: 0;
+    /* adding line-height property adjusts the text from getting cut in half */
 
 }
 
@@ -34,4 +35,22 @@ html {
     background-color: cornflowerblue;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.gameBox {
+    /* background-color: gainsboro; */
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    padding: 10%;
+    height: 65%;
+    width: 65%;
+}
+
+.box {
+    background-color: black;
 }
