@@ -1,0 +1,37 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.mainApp {
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    height: 100%;
+}
+
+.topbar {
+    background-color: darkgray;
+    padding: 0 0.8%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    -webkit-user-select: none;
+
+
+}
+
+.contentArea {
+    background-color: cornflowerblue;
+    height: 100%;
+    width: 100%;
+}
