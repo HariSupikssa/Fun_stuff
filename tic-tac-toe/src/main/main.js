@@ -8,7 +8,7 @@ const createWindow = () => {
         resizable: false,
         frame: false,
     })
-    
+
     win.loadFile('../website/index.html')
 }
 

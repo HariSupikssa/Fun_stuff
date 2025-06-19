@@ -53,4 +53,5 @@ html {
 
 .box {
     background-color: black;
+    aspect-ratio: 1;
 }
