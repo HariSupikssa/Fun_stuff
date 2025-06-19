@@ -16,6 +16,9 @@ let moveCount = 0
 let sword = "../resources/sword-img.png"
 let bomb = "../resources/bomb-img.png"
 
+let swordName = sword.split("/").pop()
+let bombName = bomb.split("/").pop()
+
 let msgCon = document.querySelector('.msgContainer')
 let msg = document.querySelector('.msg')
 let boxes = document.querySelectorAll('.box')
@@ -50,16 +53,28 @@ const checkWinner = () => {
         let img3 = boxes[pattern[2]].querySelector("img");
         // gives <img>
 
-        let val1 = img1 ? img1.src : null;
-        let val2 = img2 ? img2.src : null;
-        let val3 = img3 ? img3.src : null;
+        let val1 = img1 ? img1.src.split("/").pop : null;
+        let val2 = img2 ? img2.src.split("/").pop : null;
+        let val3 = img3 ? img3.src.split("/").pop : null;
         // checks if <img> exists, take src else null
 
         if (val1 !== null && val2 !== null && val3 !== null && val1 === val2 && val2 === val3) {
             hasWin = true
             gameOver = true
 
-            let winner = val1 === bomb ? "O" : "X"
+            // val1 = val1.split("/").pop()
+
+            // let winner = val1 === sword ? "O" : "eieioeowsdkdfj"
+            // console.log(val1)
+            // console.log(sword)
+            // val1 which is img.src is absolute path while sword is relative path so they always gonna be false
+
+
+            let winner = val1 === swordName ? "O" : "X"
+            document.querySelector(".err").innerHTML = `val1 = ${val1}, swordName = ${swordName}`
+            // This doesn't work either
+
+            console.log(winner)
             showWinner(winner)
             return
 
@@ -73,7 +88,28 @@ const checkWinner = () => {
     }
 }
 
-const showWinner = (winner) =>{
+const showWinner = (winner) => {
     msg.innerHTML = `${winner} wins!`
-        msgCon.classList.remove("hide")
+    msgCon.classList.remove("hide")
+}
+
+restartBtn.addEventListener('click', () => {
+    enableBoxes()
+    msg.innerHTML = ""
+    msgCon.classList.add("hide")
+    turnO = true
+    hasWin = false
+    gameOver = false
+    moveCount = 0
+})
+
+const enableBoxes = () => {
+    boxes.forEach((box)=>{
+        box.dataset.clicked = false
+        const img = box.querySelector("img")
+        if(img)
+        {
+            img.remove()
+        }
+    })
 }
