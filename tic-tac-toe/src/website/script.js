@@ -1,3 +1,5 @@
+
+
 const winPatterns = [
     [0, 1, 2],
     [0, 3, 6],
@@ -53,9 +55,9 @@ const checkWinner = () => {
         let img3 = boxes[pattern[2]].querySelector("img");
         // gives <img>
 
-        let val1 = img1 ? img1.src.split("/").pop : null;
-        let val2 = img2 ? img2.src.split("/").pop : null;
-        let val3 = img3 ? img3.src.split("/").pop : null;
+        let val1 = img1 ? img1.src.split("/").pop() : null;
+        let val2 = img2 ? img2.src.split("/").pop() : null;
+        let val3 = img3 ? img3.src.split("/").pop() : null;
         // checks if <img> exists, take src else null
 
         if (val1 !== null && val2 !== null && val3 !== null && val1 === val2 && val2 === val3) {
@@ -70,9 +72,8 @@ const checkWinner = () => {
             // val1 which is img.src is absolute path while sword is relative path so they always gonna be false
 
 
-            let winner = val1 === swordName ? "O" : "X"
-            document.querySelector(".err").innerHTML = `val1 = ${val1}, swordName = ${swordName}`
-            // This doesn't work either
+            let winner = val1 === bombName ? "O" : "X"
+            // document.querySelector(".err").innerHTML = `val1 = ${val1}, swordName = ${swordName}`
 
             console.log(winner)
             showWinner(winner)
@@ -104,11 +105,10 @@ restartBtn.addEventListener('click', () => {
 })
 
 const enableBoxes = () => {
-    boxes.forEach((box)=>{
+    boxes.forEach((box) => {
         box.dataset.clicked = false
         const img = box.querySelector("img")
-        if(img)
-        {
+        if (img) {
             img.remove()
         }
     })
