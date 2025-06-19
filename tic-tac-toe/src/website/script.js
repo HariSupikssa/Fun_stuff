@@ -60,6 +60,7 @@ const checkWinner = () => {
             gameOver = true
 
             let winner = val1 === bomb ? "O" : "X"
+            showWinner(winner)
             return
 
 
@@ -70,4 +71,9 @@ const checkWinner = () => {
         msgCon.classList.remove("hide")
         gameOver = true
     }
+}
+
+const showWinner = (winner) =>{
+    msg.innerHTML = `${winner} wins!`
+        msgCon.classList.remove("hide")
 }
