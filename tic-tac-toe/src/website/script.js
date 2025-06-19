@@ -1,5 +1,3 @@
-
-
 const winPatterns = [
     [0, 1, 2],
     [0, 3, 6],
@@ -90,7 +88,7 @@ const checkWinner = () => {
 }
 
 const showWinner = (winner) => {
-    msg.innerHTML = `${winner} wins!`
+    msg.innerHTML = `${winner} Wins!`
     msgCon.classList.remove("hide")
 }
 
