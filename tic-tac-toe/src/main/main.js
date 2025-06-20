@@ -1,6 +1,7 @@
 // console.log("Hello, World!")
 const { app, BrowserWindow } = require('electron')
 const { ipcMain } = require('electron')
+const path = require('path')
 
 const createWindow = () => {
     const win = new BrowserWindow({
@@ -8,6 +9,7 @@ const createWindow = () => {
         height: 600,
         resizable: false,
         frame: false,
+        // icon: path.join(__dirname,'./resources/app-icon.ico'),
         webPreferences:
         {
             nodeIntegration: true,
