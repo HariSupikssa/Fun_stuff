@@ -5,9 +5,7 @@
 
 body,
 html {
-    font-family: IrishGrover;
-    padding: 0;
-    margin: 0;
+
     height: 100%;
     width: 100%;
     overflow-y: hidden;
@@ -16,8 +14,13 @@ html {
     text-align: center;
 }
 
-.title, .msg
-{
+* {
+    font-family: IrishGrover;
+    padding: 0px;
+    margin: 0px;
+}
+
+.title {
     /* letter-spacing: 5px; */
     font-size: 28px;
     font-weight: 100;
@@ -26,9 +29,9 @@ html {
 .msgContainer {
     position: absolute;
     left: 50%;
-  transform: translateX(-50%);
-    padding: 0;
-    margin: 0 auto;
+    transform: translateX(-50%);
+    padding: 2%;
+    margin: 5% auto;
 }
 
 .mainApp {
@@ -43,7 +46,7 @@ html {
 .topbar {
     /* background-color: darkgray; */
     background-color: #D3ABFFB3;
-    padding: 0 2%;
+    padding: 1% 2%;
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -63,17 +66,16 @@ html {
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 7%;
 
 }
 
 .gameBox {
-    background-color: #00000066;
+    background-color: none;
     display: grid;
-    /* column-gap: 10px;
-    row-gap: 10px; */
     gap: 15px;
     grid-template-columns: repeat(3, 1fr);
-    margin: auto;
+    margin: 21% auto auto;
     padding: 3%;
     height: 60%;
     width: 60%;
@@ -88,4 +90,18 @@ html {
     background-color: #D3ABFFB3;
     border-radius: 11px;
     aspect-ratio: 1;
+}
+
+button {
+    background: black;
+    cursor: pointer;
+    border: none;
+    font-size: 35px;
+    font-weight: 100;
+    color: white;
+}
+
+.msg {
+    font-size: 35px;
+    font-weight: 100;
 }
