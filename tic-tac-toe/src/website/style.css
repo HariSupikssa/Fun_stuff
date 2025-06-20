@@ -3,6 +3,11 @@
     src: url('../resources/font/IrishGrover-Regular.ttf');
 }
 
+:root {
+    --mauve: #D3ABFFB3;
+    --black-40: #00000066;
+}
+
 body,
 html {
 
@@ -10,7 +15,6 @@ html {
     width: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
-    color: white;
     text-align: center;
 }
 
@@ -18,10 +22,10 @@ html {
     font-family: IrishGrover;
     padding: 0px;
     margin: 0px;
+    color: white;
 }
 
 .title {
-    /* letter-spacing: 5px; */
     font-size: 28px;
     font-weight: 100;
 }
@@ -38,14 +42,14 @@ html {
 
     display: flex;
     flex-direction: column;
-    /* background-color: beige; */
     background-image: url('../resources/bg.jpg');
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
     height: 100%;
 }
 
 .topbar {
-    /* background-color: darkgray; */
-    background-color: #D3ABFFB3;
+    background-color: var(--mauve);
     padding: 1% 2%;
     height: 50px;
     display: flex;
@@ -61,7 +65,6 @@ html {
 }
 
 .contentArea {
-    /* background-color: cornflowerblue; */
     height: 100%;
     width: 100%;
     display: flex;
@@ -71,7 +74,7 @@ html {
 }
 
 .gameBox {
-    background-color: none;
+    background-color: var(--black-40);
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(3, 1fr);
@@ -86,22 +89,21 @@ html {
 }
 
 .box {
-    /* background-color: black; */
-    background-color: #D3ABFFB3;
+    background-color: var(--mauve);
     border-radius: 11px;
     aspect-ratio: 1;
 }
 
 button {
-    background: black;
+    background: none;
     cursor: pointer;
     border: none;
-    font-size: 35px;
-    font-weight: 100;
-    color: white;
+    font-size: 30px;
+    font-weight: 80;
+    
 }
 
 .msg {
-    font-size: 35px;
-    font-weight: 100;
+    font-size: 30px;
+    font-weight: 80;
 }
