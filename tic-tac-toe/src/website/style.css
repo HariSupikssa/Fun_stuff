@@ -99,12 +99,22 @@ button {
     border: none;
     font-size: 30px;
     font-weight: 80;
-    
+
 }
 
-#restartBtn
-{
+#restartBtn {
     background: none;
+    margin: 0 auto;
+    text-shadow: 0 0 30px #C88CFFb3, 0 0 100px #E2CCFFb3;
+    
+    /* position: absolute; 
+    text-shadow: x-direction, y-direction, blur-radius, color */
+}
+#restartBtn:hover
+{
+    text-shadow: 0 0 20px #dfc0fce6, 0 0 70px #E2CCFFe6;
+    
+    font-size: 32px;
 }
 
 .msg {
@@ -112,8 +122,7 @@ button {
     font-weight: 80;
 }
 
-#closeBtn
-{
+#closeBtn {
     background-image: url('../resources/close-icon.png');
     background-color: inherit;
     background-size: auto;
