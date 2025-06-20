@@ -14,7 +14,7 @@ const createWindow = () => {
         {
             nodeIntegration: true,
             contextIsolation: false,
-            // devTools: true,
+            devTools: true,
 
         }
     })

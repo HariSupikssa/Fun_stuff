@@ -119,5 +119,6 @@ const enableBoxes = () => {
 
 const playSound = (audioSrc) => {
     const audio = new Audio(audioSrc)
+    audio.volume = 0.2;
     audio.play()
 }
