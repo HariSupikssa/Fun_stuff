@@ -16,6 +16,9 @@ let moveCount = 0
 let sword = "../resources/sword-img.png"
 let bomb = "../resources/bomb-img.png"
 
+let swordSound = "../resources/audio/sword-1.wav"
+let bombSound = "../resources/audio/bomb-1.wav"
+
 let swordName = sword.split("/").pop()
 let bombName = bomb.split("/").pop()
 
@@ -33,11 +36,13 @@ boxes.forEach((box) => {
 
         const img = document.createElement('img')
         let source = turnO ? bomb : sword
+        let audioSrc = turnO ? bombSound : swordSound
         img.src = source
         img.style.width = "95%"
         img.style.height = "95%"
 
         box.appendChild(img)
+        playSound(audioSrc)
 
         turnO = !turnO
         moveCount++
@@ -110,4 +115,9 @@ const enableBoxes = () => {
             img.remove()
         }
     })
+}
+
+const playSound = (audioSrc) => {
+    const audio = new Audio(audioSrc)
+    audio.play()
 }
