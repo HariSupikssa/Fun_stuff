@@ -95,7 +95,6 @@ html {
 }
 
 button {
-    background: none;
     cursor: pointer;
     border: none;
     font-size: 30px;
@@ -103,7 +102,22 @@ button {
     
 }
 
+#restartBtn
+{
+    background: none;
+}
+
 .msg {
     font-size: 30px;
     font-weight: 80;
+}
+
+#closeBtn
+{
+    background-image: url('../resources/close-icon.png');
+    background-color: inherit;
+    background-size: auto;
+    background-position: center;
+    width: 20px;
+    height: 20px;
 }
