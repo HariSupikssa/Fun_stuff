@@ -4,12 +4,14 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
+    icon: './src/resources/app-icon'
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
       config: {
+        iconUrl: 'https://github.com/HariSupikssa/Fun_stuff/blob/tic-tac-toe-app/tic-tac-toe/src/resources/app-icon.ico', 
         setupIcon: './src/resources/app-icon.ico',
       },
     },
