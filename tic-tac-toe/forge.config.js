@@ -9,19 +9,26 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        setupIcon: './src/resources/app-icon.ico',
+      },
     },
     {
       name: '@electron-forge/maker-zip',
       platforms: ['darwin'],
+      icon: './src/resources/app-icon-256',
     },
     {
       name: '@electron-forge/maker-deb',
-      config: {},
+      config: {
+        icon: './src/resources/app-icon-256.png',
+      },
     },
     {
       name: '@electron-forge/maker-rpm',
-      config: {},
+      config: {
+        icon: './src/resources/app-icon-256.png', 
+      },
     },
   ],
   plugins: [
