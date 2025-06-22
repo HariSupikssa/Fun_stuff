@@ -9,7 +9,7 @@ const createWindow = () => {
         height: 600,
         resizable: false,
         frame: false,
-        // icon: path.join(__dirname,'./resources/app-icon.ico'),
+        icon: path.join(__dirname,'./resources/app-icon.ico'),
         webPreferences:
         {
             nodeIntegration: true,
