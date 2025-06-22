@@ -8,6 +8,15 @@
     --black-40: #00000066;
 }
 
+.topbar {
+    -webkit-app-region: drag;
+}
+
+.titlebarBtn
+{
+    -webkit-app-region: no-drag;
+}
+
 body,
 html {
 
@@ -23,6 +32,8 @@ html {
     padding: 0px;
     margin: 0px;
     color: white;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .title {
@@ -106,14 +117,14 @@ button {
     background: none;
     margin: 0 auto;
     text-shadow: 0 0 30px #C88CFFb3, 0 0 100px #E2CCFFb3;
-    
+
     /* position: absolute; 
     text-shadow: x-direction, y-direction, blur-radius, color */
 }
-#restartBtn:hover
-{
+
+#restartBtn:hover {
     text-shadow: 0 0 20px #dfc0fce6, 0 0 70px #E2CCFFe6;
-    
+
     font-size: 32px;
 }
 
