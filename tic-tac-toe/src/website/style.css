@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "IrishGrover";
+    src: url('../resources/font/IrishGrover-Regular.ttf');
+}
+
+:root {
+    --mauve: #D3ABFFB3;
+    --black-40: #00000066;
+}
+
+.topbar {
+    -webkit-app-region: drag;
+}
+
+.titlebarBtn
+{
+    -webkit-app-region: no-drag;
+}
+
+body,
+html {
+
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+* {
+    font-family: IrishGrover;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.msgContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2%;
+    margin: 5% auto;
+}
+
+.mainApp {
+
+    display: flex;
+    flex-direction: column;
+    background-image: url('../resources/bg.jpg');
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
+    height: 100%;
+}
+
+.topbar {
+    background-color: var(--mauve);
+    padding: 1% 2%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    -webkit-user-select: none;
+    line-height: 0;
+    /* adding line-height property adjusts the text from getting cut in half */
+
+}
+
+.contentArea {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 7%;
+
+}
+
+.gameBox {
+    background-color: var(--black-40);
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 21% auto auto;
+    padding: 3%;
+    height: 60%;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    aspect-ratio: 1;
+}
+
+.box {
+    background-color: var(--mauve);
+    border-radius: 11px;
+    aspect-ratio: 1;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-size: 30px;
+    font-weight: 80;
+
+}
+
+#restartBtn {
+    background: none;
+    margin: 0 auto;
+    text-shadow: 0 0 30px #C88CFFb3, 0 0 100px #E2CCFFb3;
+
+    /* position: absolute; 
+    text-shadow: x-direction, y-direction, blur-radius, color */
+}
+
+#restartBtn:hover {
+    text-shadow: 0 0 20px #dfc0fce6, 0 0 70px #E2CCFFe6;
+
+    font-size: 32px;
+}
+
+.msg {
+    font-size: 30px;
+    font-weight: 80;
+}
+
+#closeBtn {
+    background-image: url('../resources/close-icon.png');
+    background-color: inherit;
+    background-size: auto;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+}
